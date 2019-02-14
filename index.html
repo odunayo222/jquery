@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test</title>
+</head>
+<body>
+    <div id="store">
+        <table>
+            <tr>
+                <th>s/n</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Add</th>
+            </tr>
+            <tbody id="storeitems">
+            </tbody>
+        </table>     
+    </div>
+    <hr>
+    <form id="orderform">
+        <input id="basket"><br>
+        <br>
+        <input type="submit">
+    </form>
+    <div id="cartside">
+        <table>
+            <tr>
+                <th>s/n</th>
+                <th>item</th>
+                <th>qty</th>
+                <th>price</th>
+                <th>total</th>
+                <th>Delete</th>
+            </tr>
+            <tbody id="cart">
+            </tbody>
+            <tfoot id="summary">
+                <tr>
+                    <th colspan="5"><a href="#" id="clear" >clear cart</a></th>
+                </tr>
+                <tr>
+                    <th colspan="2"><h3>Summary</h3></th>
+                    <th id="qtys"></th>
+                    <th id="prices"></th>
+                    <th id="total"></th>
+                </tr>
+                
+            </tfoot>
+        </table>
+        
+    </div>
+ </body>
+<script src="../practice/jquery/assets/js/jquery"></script>
+<script src="jquery/assets/js/action.js"></script>
+</html>

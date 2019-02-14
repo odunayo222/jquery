@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>form</title>
+</head>
+<body>
+       <script> $(document).on("submit","#actionform",function(e){
+            e.preventDefault();
+            var val1 = $("#val1").val()
+            var val2 = $("#val2").val()
+            var result = parseInt(val1) + parseInt(val2);
+         $("#actionform")[0].reset()
+         $("#result").html(result)
+         });
+         $(document).on("submit","#action",function(e){
+            e.preventDefault();
+            var a = $("#val3").val()
+            var b = $("#val4").val()
+            var c = $("#val5").val()
+            if(a > b && a > c){
+                var results = ( a + " is the greatest")
+            } else if(b >  c){
+              var results = ( b + " is the greatest")
+          }else{
+            var results = ( c + " is the greatest")
+          }
+         $("#action")[0].reset()
+         $("#results").html(results)
+         });
+         $(document).on("click","#actions",function(e){
+            e.preventDefault();
+            var a = $("#val6").val()
+            if(a >=75 && a <= 100){
+                var answer = ("Excellent :A1")
+            }else if(a >= 65 && a <= 74 ){
+                var answer = ("Very Good: B2")
+            }else if(a >= 55 && a <= 64){
+                var answer = ("Credit: C4")
+            }else if(a >= 50 && a <=54){
+                var answer = ("Credit: C5")
+            }else if(a >=1 && a <= 49) {
+                var answer = ("Fail: F9");
+            } else{
+                var answer = ("Try again");
+            }
+         $("#actions")[0].reset()
+         $("#answer").html(answer)
+         });
+         </script>
+         <h1>Add up two numbers here</h1>
+            <form id="actionform">
+                <input type="text" id="val1">
+                <input type="text" id="val2">
+                <input type="submit" id="submit">
+            </form>
+          <span id="result" ></span>
+          <br>
+          <h1>Check for greatest of three numbers here</h1>
+          <form id="action">
+            <input type="text" id="val3">
+            <input type="text" id="val4">
+            <input type="text" id="val5">
+            <input type="submit" id="submit">
+         </form>
+         <span id="results" ></span>
+         <br>
+         <h1>Input your score and know your grade  here</h1>
+         <form id="actions">
+          <input type="text" id="val6">
+          <input type="submit" id="click">
+         </form>
+         <span id="answer"></span>
+         
+    
+</body>
+</html>
